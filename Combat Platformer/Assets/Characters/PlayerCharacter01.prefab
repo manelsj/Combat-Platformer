@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 3306555477042500171}
   - component: {fileID: 1131699358687144546}
   - component: {fileID: 4979034739418598448}
+  - component: {fileID: 2077195158567850522}
   m_Layer: 0
   m_Name: PC01Body
   m_TagString: Untagged
@@ -144,7 +145,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &4979034739418598448
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -180,3 +181,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &2077195158567850522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6237406339612757501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab6cd5c1e4122c146b393d64842944e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1131699358687144546}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  moveSpeed: 5
+  jumpSpeed: 5
