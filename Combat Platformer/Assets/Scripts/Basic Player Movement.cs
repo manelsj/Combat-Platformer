@@ -5,6 +5,7 @@ using UnityEngine;
 public class BasicPlayerMovement : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public SpriteRenderer spriteRenderer;
     public LayerMask groundLayer;
     public float moveSpeed;
     public float jumpSpeed;
@@ -22,6 +23,8 @@ public class BasicPlayerMovement : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
+        if (horizontal > 0) transform.localScale = Vector3.one;
+        else if (horizontal < 0) transform.localScale = new Vector3(-1,1,1);
 
         if (Input.GetButtonDown("Jump") && grounded)
         {

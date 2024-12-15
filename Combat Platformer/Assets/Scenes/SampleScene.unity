@@ -344,6 +344,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1773685969 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3306555477042500171, guid: 9c57360b02805ba40876d88a753591ac, type: 3}
+  m_PrefabInstance: {fileID: 6564927285640206428}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2834439763179159431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -449,9 +454,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2077195158567850522, guid: 9c57360b02805ba40876d88a753591ac, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1773685969}
     - target: {fileID: 2081104265253261017, guid: 9c57360b02805ba40876d88a753591ac, type: 3}
       propertyPath: m_Name
       value: PlayerCharacter01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306555477042500171, guid: 9c57360b02805ba40876d88a753591ac, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306555477042500171, guid: 9c57360b02805ba40876d88a753591ac, type: 3}
+      propertyPath: m_FlipY
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7860284074153093809, guid: 9c57360b02805ba40876d88a753591ac, type: 3}
       propertyPath: m_LocalRotation.w
