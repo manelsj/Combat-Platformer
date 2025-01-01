@@ -22,7 +22,11 @@ public class ProjectileScript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        //if (other.collider.tag == "Enemy")
+        if (other.collider.tag == "Enemy")
+        {
+            other.gameObject.GetComponent<BasicEnemyScript>().DecreaseHealth(10);
+        }
+            
         Destroy(gameObject);
     }
 }
