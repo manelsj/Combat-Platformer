@@ -28,7 +28,6 @@ public class BasicPlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && grounded)
         {
-            Debug.Log(grounded);
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
         }
     }
