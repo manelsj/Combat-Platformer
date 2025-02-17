@@ -408,7 +408,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerGO: {fileID: 1783808095}
-  offset: {x: 0, y: 0, z: -10}
+  zOffset: -10
+  horizontalOffset: 2
 --- !u!81 &956078371
 AudioListener:
   m_ObjectHideFlags: 0
