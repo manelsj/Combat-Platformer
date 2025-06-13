@@ -265,7 +265,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85ed9566eae8ece499be6794cfc01239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelList: []
+  levelList:
+  - {fileID: 5794811465564438645}
+  levelNameList:
+  - Level 1-1
+  levelNum: 0
 --- !u!4 &1807397127
 Transform:
   m_ObjectHideFlags: 0
@@ -430,6 +434,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68bfe19028c5e69458ca12ed5c007a3a, type: 3}
+--- !u!1 &5794811465564438645 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2607133289598620388, guid: 68bfe19028c5e69458ca12ed5c007a3a, type: 3}
+  m_PrefabInstance: {fileID: 5794811465564438644}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
