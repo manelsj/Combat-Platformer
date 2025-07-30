@@ -8,10 +8,12 @@ public class LevelManager : MonoBehaviour
     public List<GameObject> checkpoints = new List<GameObject>();
     private int currentCheck;
     private int lastCheck;
-    public GameObject gameManager;
+    private GameObject GameManager;
+
     // Start is called before the first frame update
     void Start()
     {
+        GameManager = GameObject.FindWithTag("Game Manager");
         lastCheck = checkpoints.Count;
         currentCheck = 0;
     }
@@ -34,6 +36,6 @@ public class LevelManager : MonoBehaviour
 
     private void nextLevel()
     {
-        gameManager.GetComponent<GameManager>().nextLevel();
+        GameManager.GetComponent<GameManager>().nextLevel();
     }
 }

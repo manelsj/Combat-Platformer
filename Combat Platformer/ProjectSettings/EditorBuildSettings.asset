@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/PersistantScene.unity
     guid: edd3d4d46589bad4fa76740dd81b4abc
+  - enabled: 1
+    path: Assets/Scenes/Level 1-2.unity
+    guid: a4304190737cfd644bf4f10ccc744d6b
   m_configObjects: {}

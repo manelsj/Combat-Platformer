@@ -39,4 +39,13 @@ public class BasicPlayerMovement : MonoBehaviour
         grounded = Physics2D.CircleCast(transform.position, 1.0f, Vector2.down, 0.05f);
     }
 
+    //private void OnTriggerStay2D(Collider2D other)
+    //{
+    //    if (other.tag == ("Ground")) grounded = true;
+    //}
+
+    //private void OnTriggerExit2D(Collider2D other)
+    //{
+    //    if (other.tag == ("Ground")) grounded = false;
+    //}
 }

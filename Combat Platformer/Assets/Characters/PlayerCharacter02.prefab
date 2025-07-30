@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2163553739012513257}
   m_Layer: 0
   m_Name: PlayerCharacter02
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,9 +45,11 @@ GameObject:
   - component: {fileID: 8499755753346893330}
   - component: {fileID: 8145820682882882907}
   - component: {fileID: 7469391250967653570}
+  - component: {fileID: 7167822978131441742}
+  - component: {fileID: 7940788515858209384}
   m_Layer: 0
   m_Name: PC02Body
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,6 +184,40 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &7167822978131441742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6073611490373642868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab6cd5c1e4122c146b393d64842944e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 8145820682882882907}
+  spriteRenderer: {fileID: 8499755753346893330}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  moveSpeed: 5
+  jumpSpeed: 15
+--- !u!114 &7940788515858209384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6073611490373642868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be405b76f3bb9a546b8db1338d8cc900, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitboxGO: {fileID: 3434515870525755258, guid: 1b850c96a36642a4f969680ca07cb048, type: 3}
+  hitboxLocation: {fileID: 6648647068246988717}
+  hitboxTime: 0.2
 --- !u!1 &6648647068246988717
 GameObject:
   m_ObjectHideFlags: 0

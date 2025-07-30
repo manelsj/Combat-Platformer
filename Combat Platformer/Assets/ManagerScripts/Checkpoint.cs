@@ -8,7 +8,7 @@ public class Checkpoint : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -17,8 +17,15 @@ public class Checkpoint : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        levelManager.GetComponent<LevelManager>().nextCheckpoint();
+        Debug.Log("Test");
+
+        if (other.gameObject.tag == "Player")
+        {
+            levelManager.GetComponent<LevelManager>().nextCheckpoint();
+        }
+        
+        
     }
 }
