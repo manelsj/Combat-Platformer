@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8524825157252314959}
   m_Layer: 0
   m_Name: Level 1-1
-  m_TagString: Untagged
+  m_TagString: Level Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,3 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14e50c305ab81cc4284b9ae7edfc80b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelNum: 0
+  checkpoints: []
+  PlayerGO: {fileID: 0}

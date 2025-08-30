@@ -11,11 +11,14 @@ public class BasicPlayerMovement : MonoBehaviour
     public float jumpSpeed;
     private bool grounded = false;
     private float horizontal;
+    public float health;
+    public float maxHealth;
+    private GameObject LevelManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        LevelManager = GameObject.FindWithTag("Level Manager");
 
     }
 
@@ -30,6 +33,11 @@ public class BasicPlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpSpeed);
         }
+
+        if (health <= 0)
+        {
+            LevelManager.GetComponent<LevelManager>().resetLevel();
+        }
     }
 
     private void FixedUpdate()
@@ -38,14 +46,4 @@ public class BasicPlayerMovement : MonoBehaviour
 
         grounded = Physics2D.CircleCast(transform.position, 1.0f, Vector2.down, 0.05f);
     }
-
-    //private void OnTriggerStay2D(Collider2D other)
-    //{
-    //    if (other.tag == ("Ground")) grounded = true;
-    //}
-
-    //private void OnTriggerExit2D(Collider2D other)
-    //{
-    //    if (other.tag == ("Ground")) grounded = false;
-    //}
 }

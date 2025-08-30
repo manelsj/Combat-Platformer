@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    public static LevelManager Instance;
+
     public int levelNum;
     public List<GameObject> checkpoints = new List<GameObject>();
-    private int currentCheck;
+    public int currentCheck;
     private int lastCheck;
     private GameObject GameManager;
+    public GameObject PlayerGO;
 
     // Start is called before the first frame update
     void Start()
@@ -37,5 +40,11 @@ public class LevelManager : MonoBehaviour
     private void nextLevel()
     {
         GameManager.GetComponent<GameManager>().nextLevel();
+    }
+
+    public void resetLevel()
+    {
+        PlayerGO.transform.position = checkpoints[currentCheck].transform.position;
+        PlayerGO.GetComponent<BasicPlayerMovement>().health = PlayerGO.GetComponent<BasicPlayerMovement>().maxHealth;
     }
 }

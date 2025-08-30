@@ -5,6 +5,7 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     public GameObject levelManager;
+    private bool disabled = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +22,10 @@ public class Checkpoint : MonoBehaviour
     {
         Debug.Log("Test");
 
-        if (other.gameObject.tag == "Player")
+        if ((other.gameObject.tag == "Player") && (!disabled))
         {
             levelManager.GetComponent<LevelManager>().nextCheckpoint();
+            disabled = true;
         }
         
         
