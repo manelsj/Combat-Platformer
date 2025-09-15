@@ -36,7 +36,7 @@ public class PatrolEnemyScript : MonoBehaviour
     {
         if (other.gameObject.tag == ("Player"))
         {
-            other.gameObject.GetComponent<BasicPlayerMovement>().health = 0;
+            other.gameObject.GetComponent<BasicPlayerScript>().health--;
         }
     }
 }

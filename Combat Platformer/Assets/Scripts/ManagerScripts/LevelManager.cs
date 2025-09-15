@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -13,12 +14,15 @@ public class LevelManager : MonoBehaviour
     private GameObject GameManager;
     public GameObject PlayerGO;
 
+    public Slider healthBar;
+
     // Start is called before the first frame update
     void Start()
     {
         GameManager = GameObject.FindWithTag("Game Manager");
         lastCheck = checkpoints.Count;
         currentCheck = 0;
+        checkpoints[0].GetComponent<Checkpoint>().disabled = true;
     }
 
     // Update is called once per frame
@@ -31,7 +35,7 @@ public class LevelManager : MonoBehaviour
     {
         currentCheck++;
 
-        if (currentCheck == checkpoints.Count) {
+        if (currentCheck == checkpoints.Count - 1) {
             nextLevel();
         }
 
@@ -45,6 +49,6 @@ public class LevelManager : MonoBehaviour
     public void resetLevel()
     {
         PlayerGO.transform.position = checkpoints[currentCheck].transform.position;
-        PlayerGO.GetComponent<BasicPlayerMovement>().health = PlayerGO.GetComponent<BasicPlayerMovement>().maxHealth;
+        PlayerGO.GetComponent<BasicPlayerScript>().health = PlayerGO.GetComponent<BasicPlayerScript>().maxHealth;
     }
 }
